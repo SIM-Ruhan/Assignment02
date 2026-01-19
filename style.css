@@ -9,6 +9,8 @@ body{
     background-color:#1A0B2E ;
     font-family: "Inter", sans-serif;
 }
+
+/* Shared styles */
 .gradient{
     background: linear-gradient(47.64deg, rgba(247, 233, 63, 1),rgba(251, 9, 180, 1),rgba(145, 0, 248, 1));
 }
@@ -22,6 +24,17 @@ body{
     border: none;
 }
 
+.common-title{
+    font-size: 3rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+.relative{
+    position: relative;
+}
+.green{
+    color: #00FF88;
+}
 /* Nav Bar styles */
 
 nav{
@@ -54,34 +67,10 @@ nav{
 /* Banner section styles */
 .banner{
     background-image: url(./assets/hero-bg.png);
-    background-size: 100vw;
+    background-size: 100%;
    background-repeat: no-repeat;
 }
-.banner-container{
-            width: 21.875rem;
-            height: 21.875rem;
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-    
-}
-.box{
-    position: relative;
-    
-}
-.size{
-    max-width: 100%;
-    height: auto;
-}
-.microphone{
-    right: 140px;
-}
-.microphone-new{
-  top: -80px;
-  left: 220px;
-  z-index: 1;
-}
+
 
 .new-btn{
     padding: 0.5rem 1rem;
@@ -94,6 +83,7 @@ nav{
     border: none;
 }
 .banner-description{
+    margin-top: 2.5rem;
     text-align: center;
 }
 .banner-title{
@@ -157,11 +147,6 @@ color: #FFFFFF80;
     gap: 5rem;
 }
 /* Why choose section */
-#title{
-    font-size: 3rem;
-    margin-bottom: 2.5rem;
-    text-align: center;
-}
 .why-choose{
     padding: 7.5vw 12.5vw;
     background-color: #230E3D;
@@ -209,8 +194,50 @@ color: #FFFFFF80;
     
 }
 
+/* Featured episodes */
+.episodes{
+    padding: clamp(2rem, 7vw, 8rem) clamp(1rem, 12vw, 12rem);
+}
+.episode-card{
+    border-radius: 1.5rem;
+    background-color: #250D44;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.episode-img{
+    width: 100%;
+     aspect-ratio: 16 / 9;
+}
+.episode-card-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.875rem;
+}
+
+
+.episode-title{
+    padding: 1.5rem 1.5rem;
+font-size: clamp(1.25rem, 2vw, 1.5rem);
+font-weight: bold;
+
+}
+.episode-info{
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    line-height: 1.5rem;
+    color: #FFFFFF60;
+}
+
+
+
+
+
+
 @media screen and (max-width:576px) {
-   
+   .common-title{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
    nav{
      padding: 1rem 1.25rem;
    }
@@ -231,10 +258,6 @@ padding: 2.5rem 1.25rem;
     grid-template-columns: repeat(2,1fr);
     gap: 2.5rem;
 }
-#title{
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
 .why-choose{
     padding: 2.5rem 1.25rem;
 }
@@ -245,5 +268,8 @@ padding: 2.5rem 1.25rem;
                     "community"
                     "interviews"
                     "resource";
+}
+.episode-card-container{
+    grid-template-columns: repeat(1,1fr);
 }
 }
