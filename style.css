@@ -25,7 +25,7 @@ body{
 /* Nav Bar styles */
 
 nav{
-    padding: 1rem clamp(1.25rem, 15.5vw, 12.5rem);
+    padding: 1rem 12.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,11 +45,92 @@ nav{
     font-weight: 500;
     line-height: 120%;
 }
+
 .logo-wave{
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
+/* Banner section styles */
+.banner{
+    background-image: url(./assets/hero-bg.png);
+    background-size: 100vw;
+   background-repeat: no-repeat;
+}
+.banner-container{
+            width: 21.875rem;
+            height: 21.875rem;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+}
+.box{
+    position: relative;
+    
+}
+.size{
+    max-width: 100%;
+    height: auto;
+}
+.microphone{
+    right: 140px;
+}
+.microphone-new{
+  top: -80px;
+  left: 220px;
+  z-index: 1;
+}
 
+.new-btn{
+    padding: 0.5rem 1rem;
+    border-radius: 1000px;
+    background-color: #00FF88;
+    box-shadow: 0 3px 27px 0 #00FF8850;
+    color: black;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border: none;
+}
+.banner-description{
+    text-align: center;
+}
+.banner-title{
+    font-size: 3.75rem;
+    font-weight: 600;
+}
+.banner-info{
+    color: #FFFFFF80;
+    margin-top: 0.5rem;
+}
+.btn-subscribe{
+    padding: 0.75rem 1.25rem;
+    border: 1px solid #00FF88;
+    border-radius: 10000px;
+    color: #00FF88;
+    background-color: transparent;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 1.5rem;
+}
 
+/* About Section Styles */
 
+@media screen and (max-width:576px) {
+   
+   nav{
+     padding: 1rem 1.25rem;
+   }
+    .hambarger-menu{
+    display:block;
+}
+.subscribe, .menu-bar{
+    display: none;
+}
+
+}
