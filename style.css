@@ -156,6 +156,58 @@ color: #FFFFFF80;
     grid-template-columns: repeat(4,1fr);
     gap: 5rem;
 }
+/* Why choose section */
+#title{
+    font-size: 3rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+.why-choose{
+    padding: 7.5vw 12.5vw;
+    background-color: #230E3D;
+}
+.why-choose-card{
+    margin: 0.9375rem;
+    padding: 2.5rem;
+    border-radius: 2.5rem;
+    background-color: #35116540;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;    
+}
+.why-choose-card h4{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+.why-choose-card p{
+    line-height: 1.5rem;
+    color: #FFFFFF60;
+}
+.audio{
+    grid-area: audio;
+}
+.device{
+    grid-area: device;
+}
+.community{
+    grid-area: community;
+}
+.interviews{
+    grid-area: interviews;
+}
+.resource{
+    grid-area: resource;
+}
+.why-choose-card-container{
+    display: grid;
+ grid-template-areas: "audio device device"
+                    "audio community community"
+                    "interviews interviews resource";
+    
+}
 
 @media screen and (max-width:576px) {
    
@@ -178,5 +230,20 @@ padding: 2.5rem 1.25rem;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 2.5rem;
+}
+#title{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.why-choose{
+    padding: 2.5rem 1.25rem;
+}
+.why-choose-card-container{
+    display: grid;
+ grid-template-areas: "audio"
+                    "device"
+                    "community"
+                    "interviews"
+                    "resource";
 }
 }
