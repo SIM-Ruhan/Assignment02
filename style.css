@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color:white ;
+    background-color:#1A0B2E ;
+    font-family: "Inter", sans-serif;
+}
+.gradient{
+    background: linear-gradient(47.64deg, rgba(247, 233, 63, 1),rgba(251, 9, 180, 1),rgba(145, 0, 248, 1));
+}
+
+.btn-primary{
+    padding: 0.75em 1em;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 10000px;
+    border: none;
+}
+
+/* Nav Bar styles */
+
+nav{
+    padding: 1rem clamp(1.25rem, 15.5vw, 12.5rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu{
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+.hambarger-menu{
+    display: none;
+}
+.link{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 120%;
+}
+.logo-wave{
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+
