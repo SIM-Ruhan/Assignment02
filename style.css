@@ -40,7 +40,7 @@ body{
 nav{
     padding: 1rem 12.5rem;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
 }
 .menu{
@@ -58,7 +58,9 @@ nav{
     font-weight: 500;
     line-height: 120%;
 }
-
+.logo{
+    font-size: 2rem;
+}
 .logo-wave{
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -66,27 +68,72 @@ nav{
 
 /* Banner section styles */
 .banner{
-    background-image: url(./assets/hero-bg.png);
-    background-size: 100%;
-   background-repeat: no-repeat;
+    background: url('./assets/hero-bg.png') no-repeat center center;
+            background-size: cover;
+            padding: 3.125rem 1.25rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 70vh;
+            text-align: center;
+}
+.mic-container {
+            position: relative;
+            width: 21.875rem;
+            height: 21.875rem;
+            margin-bottom: 1.875rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mic-circle {
+            width: 100%;
+            height: 100%;
+            background: url('./assets/hero-circle.png') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          
+        }
+        .mic-icon {
+            width:7.5rem;
+            height: auto;
+        }
+
+        .new-badge {
+            position: absolute;
+            top: 25px;
+            right: 0;
+            background-color: #2ecc71;
+            color: black;
+            padding: 0.5rem 1rem;
+            border-radius: 1000px;
+            font-weight: 600;
+            font-size: 1.125rem;
+            color: #1A0B2E;
+            box-shadow: 0 0 2px 2px #5d2aa1;
+            animation: zoom-in-out 2s ease-out infinite;
+        }
+@keyframes zoom-in-out {
+  0% {
+    transform: scale(1); 
+  }
+  50% {
+    transform: scale(1.2); 
+  }
+  100% {
+    transform: scale(1); 
+  }
 }
 
-
-.new-btn{
-    padding: 0.5rem 1rem;
-    border-radius: 1000px;
-    background-color: #00FF88;
-    box-shadow: 0 3px 27px 0 #00FF8850;
-    color: black;
-    font-size: 1.125rem;
-    font-weight: 600;
-    border: none;
-}
 .banner-description{
     margin-top: 2.5rem;
     text-align: center;
 }
-.banner-title{
+#banner-title{
     font-size: 3.75rem;
     font-weight: 600;
 }
@@ -96,10 +143,12 @@ nav{
 }
 .btn-subscribe{
     padding: 0.75rem 1.25rem;
-    border: 1px solid #00FF88;
+    border: 1.5px solid #00FF88;
     border-radius: 10000px;
     color: #00FF88;
     background-color: transparent;
+    font-weight: 600;
+    font-size: 1rem;
 }
 .buttons{
     display: flex;
@@ -275,7 +324,9 @@ gap: 0.5rem;
     font-size: 3rem;
     font-weight: 900;
 }
-.footer-img{
+.footer-img, .clock{
+    position: relative;
+    top: 1.8px;
     max-width:1rem;
     min-height: 1rem;
 }
@@ -292,7 +343,9 @@ font-weight: 400;
 line-height: 1.5rem;
 color: #FAFAFA60;
 }
-
+.banner-title{
+    font-size: 2.5rem;
+}
 
 @media screen and (max-width:576px) {
    .common-title{
@@ -308,6 +361,24 @@ color: #FAFAFA60;
 .subscribe, .menu-bar{
     display: none;
 }
+.banner{
+    padding: 2.5rem 1.25rem;
+    background-size: 150% auto;
+    background-position: center 20%;
+}
+.mic-container{
+    width: 12.5rem;
+    height: 12.5rem;
+    margin-bottom:1.5rem ;
+}
+.mic-icon{
+    width: 5rem;
+}
+.new-badge {
+        font-size: 1rem;
+        top: 0.25rem;
+    }
+
 .about{
 padding: 2.5rem 1.25rem;
 }
@@ -345,4 +416,5 @@ align-items: center;
 .footer{
     padding: 2.5rem 1.5rem;
 }
+
 }
