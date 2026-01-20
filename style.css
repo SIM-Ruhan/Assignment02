@@ -23,7 +23,9 @@ body{
     border-radius: 10000px;
     border: none;
 }
-
+.btn-primary:hover{
+    color: black;
+}
 .common-title{
     font-size: 3rem;
     margin-bottom: 2.5rem;
@@ -35,6 +37,10 @@ body{
 .green{
     color: #00FF88;
 }
+
+
+
+
 /* Nav Bar styles */
 
 nav{
@@ -117,6 +123,10 @@ nav{
             box-shadow: 0 0 2px 2px #5d2aa1;
             animation: zoom-in-out 2s ease-out infinite;
         }
+        .new-badge:hover{
+            background-color: #00FF88;
+            color: #1A0B2E;
+        }
 @keyframes zoom-in-out {
   0% {
     transform: scale(1); 
@@ -127,7 +137,7 @@ nav{
   100% {
     transform: scale(1); 
   }
-}
+} 
 
 .banner-description{
     margin-top: 2.5rem;
@@ -150,6 +160,11 @@ nav{
     font-weight: 600;
     font-size: 1rem;
 }
+.btn-subscribe:hover{
+    color: tomato;
+    background-color: white;
+    border: 1.5px solid white;
+}
 .buttons{
     display: flex;
     justify-content: center;
@@ -163,10 +178,10 @@ nav{
 padding: 3.125vw 12.5vw 7.5vw 12.5vw;
 text-align: center;
 }
-.about-title{
+/* .about-title{
     font-size: 3rem;
     font-weight: bold;
-}
+} */
 .about-info{
     margin-top: 1rem;
     line-height: 1.25rem;
@@ -313,12 +328,15 @@ gap: 0.5rem;
 
 /* Footer section styles */
 .footer{
-    padding: 7.5rem;
+     padding:5rem 1.25rem;
     text-align: center;
-    background-image: url(./assets/footer-bg.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    background: url('./assets/footer-bg.png') no-repeat center center;
+ background-size: cover;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+     min-height: 70vh;
 }
 .footer-logo{
     font-size: 3rem;
@@ -332,20 +350,32 @@ gap: 0.5rem;
 }
 .icon-container{
     margin: 2rem 0;
+    padding: 0px;
     display: flex;
     flex-wrap: wrap;
     gap: 2.5rem;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    color: #ffffff60; 
+
 }
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    
+}
+
 .copyright{
 font-weight: 400;
 line-height: 1.5rem;
 color: #FAFAFA60;
 }
-.banner-title{
-    font-size: 2.5rem;
-}
+
+
+
 
 @media screen and (max-width:576px) {
    .common-title{
@@ -365,6 +395,9 @@ color: #FAFAFA60;
     padding: 2.5rem 1.25rem;
     background-size: 150% auto;
     background-position: center 20%;
+}
+#banner-title{
+    font-size: 2.5rem;
 }
 .mic-container{
     width: 12.5rem;
@@ -414,7 +447,13 @@ padding: 2.5rem 1.25rem;
 align-items: center;
 }
 .footer{
-    padding: 2.5rem 1.5rem;
+    padding: 2.5rem 1.5rem;    
 }
-
+.icon-container {
+        max-width: 16rem;
+        min-height: 4rem;
+        flex-wrap: wrap;
+        gap: 1rem; 
+    }
+    
 }
